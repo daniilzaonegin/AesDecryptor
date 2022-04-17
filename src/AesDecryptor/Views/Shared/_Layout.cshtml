@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css" />
+
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="~/">AesDecryptor</a>
+            </div>
+            <button class="navbar-toggler d-md-none float-md-right align-top" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="col-9 navbar-collapse collapse d-md-inline-flex flex-md-row-reverse align-top" id="navbarSupportedContent ">
+                <ul class="nav navbar-nav list-group-horizontal-md">
+                    <li class="nav-item pl-3 text-sm-right 
+                            @(ViewContext.RouteData.Values["Action"]?.ToString() == "Encrypt" ? "active":"")">
+                        @Html.ActionLink("Encrypt", "Encrypt", "Home", routeValues:null, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item pl-3 text-sm-right
+                            @(ViewContext.RouteData.Values["Action"]?.ToString() == "Decrypt" ? "active":"")">
+                        @Html.ActionLink("Decrypt", "Decrypt", "Home", routeValues:null, new { @class = "nav-link" })
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

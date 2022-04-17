@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>AesDecryptor</id>
+    <version>1.0.0</version>
+    <authors>AesDecryptor</authors>
+    <owners>AesDecryptor</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+
+  </metadata>
+    <files>
+      <file src="..\bin\Debug\netcoreapp3.0\**.*" target="lib\netcoreapp3.0" />
+    </files>
+</package>
